@@ -60,12 +60,12 @@ function App() {
 
   return (
     <main>
-      <h1>{numberComplete}/{numberTotal}Complete </h1>
+      <h1>{numberComplete}/{numberTotal}Complete</h1>
       <h2>{getMessage()}</h2>
       <TaskForm onAdd={addTask} />
       {tasks.map((task,index) => (
         <Task {...task}
-
+        
               onRename={newName => renameTask(index,newName)}
               onTrash={() => removeTask(index)}
               onToggle={done => updateTaskDone(index, done)} />
